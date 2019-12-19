@@ -17,7 +17,7 @@
         },
         {
             "name": "worker",
-            "image": "patrickli/multi-worker",
+            "image": "patrick3068/multi-worker",
             "hostname": "worker", 
             "essential": false,
             "memory": 128
