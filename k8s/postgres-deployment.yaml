@@ -16,8 +16,6 @@ spec:
         - name: postgres-storage
           persistentVolumeClaim:
             claimName: database-persistent-volume-claim
-            accessModes:
-              - ReadWriteMany
       containers:
         - name: postgres
           image: postgres
@@ -25,9 +23,8 @@ spec:
             - containerPort: 5432
           volumeMounts:
             - name: postgres-storage
-              mountPath: /var/lib/postgresql/data
-              subPath: postgres
-          env:
+              mountPath: /var/lib/postgresql/pgdata
+          env: 
             - name: PGPASSWORD
               valueFrom:
                 secretKeyRef:

@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: patrick3068-com-tls
+spec:
+  secretName: patrick3068-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: patrick3068.com
+  dnsNames:
+    - patrick3068.com
+    - www.patrick3068.com
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - patrick3068.com
+          - www.patrick3068.com
