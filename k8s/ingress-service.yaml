@@ -12,7 +12,7 @@ spec:
     - hosts:
         - patrick3068.com
         - www.patrick3068.com
-      sercretName: patrick3068.com
+    sercretName: patrick3068.com
     rules:
         - host: patrick3068.com
           http:
