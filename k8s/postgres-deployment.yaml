@@ -24,11 +24,7 @@ spec:
           volumeMounts:
             - name: postgres-storage
               mountPath: /var/lib/postgresql/pgdata
-<<<<<<< HEAD
-          env: 
-=======
           env:
->>>>>>> 55adb583fe4dae0cfcd5cdf6110a3977d2208a9e
             - name: PGPASSWORD
               valueFrom:
                 secretKeyRef:
